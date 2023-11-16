@@ -6,10 +6,8 @@ import DetailMeal from "../page/DetailMeal";
 const MainRoutes = () => {
   const COLLECTION_ROUTES = [
     { link: "/", element: <MainPage />, id: 1 },
-    { link: "/det", element: <DetailMeal />, id: 2 },
-    // { link: "/details/:id", element: <DetailMeal />, id: 3 },
+    { link: "/details/:id", element: <DetailMeal />, id: 3 },
   ];
-
   return (
     <Routes>
       {COLLECTION_ROUTES.map((item) => (

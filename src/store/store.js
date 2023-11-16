@@ -1,6 +1,9 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import mealSlices from "../store/reducers/MealSlice";
 
-const rootReducers = combineReducers({});
+const rootReducers = combineReducers({
+  mealSlices,
+});
 
 export const setupStore = () => {
   return configureStore({
