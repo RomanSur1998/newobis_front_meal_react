@@ -1,0 +1,60 @@
+.d_flex {
+  display: flex;
+}
+.aline_center {
+  align-items: center;
+}
+.details_container {
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0 40px;
+}
+
+.details_info {
+  width: 100%;
+  gap: 100px;
+  justify-content: space-evenly;
+}
+.details_info-left {
+  flex-direction: column;
+  align-items: start;
+  gap: 30px;
+}
+img {
+  width: 500px;
+  border-radius: 10px;
+}
+.info_area {
+  gap: 10px;
+  margin-top: 20px;
+}
+span {
+  font-weight: bold;
+}
+
+.ingridients {
+  flex-direction: column;
+  justify-content: start;
+}
+.instruction {
+  gap: 20px;
+}
+.instruction h2 {
+  font-size: 35px;
+  color: #d49726;
+}
+.instr_text {
+  width: 90%;
+}
+.btn_youtube {
+  justify-content: center;
+  width: 300px;
+  height: 60px;
+  background-color: rgb(242, 68, 15);
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}

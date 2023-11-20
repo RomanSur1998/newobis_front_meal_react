@@ -3,56 +3,55 @@ import { useDispatch, useSelector } from "react-redux";
 import { getApiData } from "../store/reducers/ActionCreator";
 import { useParams } from "react-router";
 import { DETAILS_MEAL } from "../constant/constant";
+import "../styles/Details.css";
+import { getIngridients } from "../functions/getIngridients";
 
 const DetailMeal = () => {
   const dispatch = useDispatch();
   const { meals } = useSelector((state) => state.mealSlices);
   const { id } = useParams();
-  console.log(meals, "meals");
 
   useEffect(() => {
     getApiData(`${DETAILS_MEAL}${id}`, dispatch);
   }, []);
 
   return (
-    <div>
+    <>
       {meals &&
         meals.map((meal) => (
-          <div key={meal.idMeal}>
-            <div>
-              <div>
-                <h2>{meal.strMeal}</h2>
+          <div key={meal.idMeal} className="d_flex details_container">
+            <div className="d_flex aline_center details_info">
+              <div className="d_flex details_info-left">
                 <div>
-                  <h4>{meal.strCategory}</h4>
-                  <hr />
-                  <h4>{meal.strArea}</h4>
+                  <h2>{meal.strMeal}</h2>
+                  <div className="d_flex info_area">
+                    <h4>{meal.strCategory}</h4>
+                    <hr />
+                    <h4>{meal.strArea}</h4>
+                  </div>
+                </div>
+                <div className="d_flex ingridients">
+                  {getIngridients(meal, meals)}
                 </div>
               </div>
-              <ul>
-                <li>{meal.strIngredient1}</li>
-                <li>{meal.strIngredient2}</li>
-                <li>{meal.strIngredient3}</li>
-                <li>{meal.strIngredient4}</li>
-                <li>{meal.strIngredient5}</li>
-                <li>{meal.strIngredient6}</li>
-                <li>{meal.strIngredient7}</li>
-                <li>{meal.strIngredient8}</li>
-                <li>{meal.strIngredient9}</li>
-                <li>{meal.strIngredient10}</li>
-              </ul>
               <div>
                 <img src={meal.strMealThumb} alt="" />
               </div>
             </div>
 
-            <div>
+            <div className="d_flex instruction">
               <h2>Instruction</h2>
-              <p>{meal.strInstructions}</p>
-              <a href={meal.strYoutube}>YouTUBE</a>
+              <p className="instr_text">{meal.strInstructions}</p>
+              <a
+                className=" d_flex  aline_center btn_youtube"
+                href={meal.strYoutube}
+              >
+                YouTube
+              </a>
             </div>
           </div>
         ))}
-    </div>
+    </>
   );
 };
 

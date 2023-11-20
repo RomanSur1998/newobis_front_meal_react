@@ -1,8 +1,6 @@
-import { Form, Link, useNavigate } from "react-router-dom";
-import MainPage from "./page/MainPAge";
+import { useNavigate } from "react-router-dom";
 import MainRoutes from "./routes/MainRoutes";
 import "../src/styles/Meal.css";
-import { useState } from "react";
 
 function App() {
   const navigate = useNavigate();
