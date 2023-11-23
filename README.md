@@ -1,8 +1,10 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Проект по поиску рецептов
+Гланвная страница с отображение случаного блюда и полем поиска
+![Alt text](./src/assets/image.png)
 
-Currently, two official plugins are available:
+Для поиска блюда достаточно ввести название блюда или ингридиента в поле . Будет получен список результатов .
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+По каждому из результатов , можно пройти далее и просмотреть детальную инфмормацию . Состав и иснтрукцию по приготовлению.
+![Alt text](./src/assets/image1.png)
