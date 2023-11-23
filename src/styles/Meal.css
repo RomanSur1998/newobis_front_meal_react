@@ -16,10 +16,7 @@ header {
 h1 {
   cursor: pointer;
 }
-.details_info-left h2 {
-  font-size: 50px;
-  color: #d49726;
-}
+
 .main_container {
   display: flex;
   justify-content: space-evenly;
@@ -57,8 +54,9 @@ button {
   border: none;
 }
 .header_title h2 {
-  font-size: 50px;
+  font-size: 40px;
   color: #d49726;
+  max-width: 600px;
 }
 .header_area {
   display: flex;

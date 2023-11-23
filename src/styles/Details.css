@@ -58,3 +58,8 @@ span {
   border-radius: 10px;
   cursor: pointer;
 }
+.details_info-left h2 {
+  font-size: 40px;
+  color: #d49726;
+  max-width: 600px;
+}
